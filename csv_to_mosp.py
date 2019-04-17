@@ -12,23 +12,22 @@ LANGUAGES = {'EN': '2', 'FR': '1', 'DE': '3', 'NL': '4'}
 LANGUAGE = 'EN'
 
 CSV_FILE = 'vulnerabilities.csv'
-ORG_ID = 4 # https://objects.monarc.lu/organization/MONARC
-SCHEMA_ID = 14 # https://objects.monarc.lu/schema/14
-
-OBJECTS = []
+VALIDATING_SCHEMA = 14 # https://objects.monarc.lu/schema/14
+OWNING_ORGANIZATION = 4 # https://objects.monarc.lu/organization/MONARC
 
 
 if name == '__main__':
+    objects = []
     # Loads the objects from the CSV file
     with open(CSV_FILE, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            OBJECTS.append({
+            objects.append({
                 'name': row['label'+LANGUAGES[LANGUAGE]],
                 'description': row['description'+LANGUAGES3[LANGUAGE]],
                 'language': LANGUAGE,
-                'org_id': ORG_ID,
-                'schema_id': SCHEMA_ID,
+                'org_id': OWNING_ORGANIZATION,
+                'schema_id': VALIDATING_SCHEMA,
                 'licenses': [{'id': 92}],
                 'json_object': {
                     'uuid': row['uuid'],
@@ -41,7 +40,7 @@ if name == '__main__':
             })
 
     # Create the new objects on MOSP
-    for obj in OBJECTS:
+    for obj in objects:
         r = requests.post(config.MOSP_API,
                           auth=(config.USERNAME, config.PASSWORD),
                           headers=HEADERS,
