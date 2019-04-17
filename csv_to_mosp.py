@@ -8,8 +8,8 @@ import requests
 import config
 
 HEADERS = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-LANGUAGES = {'en': '2', 'fr': '1', 'de': '3', 'nl': '4'}
-LANGUAGE = 'en'
+LANGUAGES = {'EN': '2', 'FR': '1', 'DE': '3', 'NL': '4'}
+LANGUAGE = 'EN'
 
 CSV_FILE = 'vulnerabilities.csv'
 ORG_ID = 4 # https://objects.monarc.lu/organization/MONARC
@@ -26,6 +26,7 @@ if name == '__main__':
             OBJECTS.append({
                 'name': row['label'+LANGUAGES[LANGUAGE]],
                 'description': row['description'+LANGUAGES3[LANGUAGE]],
+                'language': LANGUAGE,
                 'org_id': ORG_ID,
                 'schema_id': SCHEMA_ID,
                 'licenses': [{'id': 92}],
