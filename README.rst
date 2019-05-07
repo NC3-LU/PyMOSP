@@ -1,6 +1,13 @@
 PyMOSP
 ======
 
+PyMOSP is a Python library to access
+`MOSP <https://github.com/CASES-LU/MOSP>`_.
+
+Installation
+------------
+
+Soon:
 
 .. code:: bash
 
