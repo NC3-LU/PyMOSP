@@ -4,7 +4,7 @@ PyMOSP
 
 .. code:: bash
 
-    $ pipen install PyMOSP
+    $ pipx install PyMOSP
     ✨🐍✨
 
 
