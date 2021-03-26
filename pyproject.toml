@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "pymosp"
+version = "0.1.0"
+description = "Python Library to access MOSP."
+authors = ["Cédric Bonhomme <cedric@cedricbonhomme.org>"]
+license = "GPL-3.0-or-later"
+
+readme = "README.md"
+
+homepage = "https://github.com/CASES-LU/PyMOSP"
+repository = "https://github.com/CASES-LU/PyMOSP"
+
+keywords = ["json", "mosp", "security"]
+
+classifiers=[
+    'License :: OSI Approved :: BSD License',
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Console',
+    'Operating System :: POSIX :: Linux',
+    'Intended Audience :: Information Technology',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Topic :: Security',
+    'Topic :: Internet'
+]
+
+include = [
+    "CHANGELOG.md",
+    "README.md",
+    "AUTHORS.md"
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/CASES-LU/PyMOSP/issues"
+"Source" = "https://github.com/CASES-LU/PyMOSP"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
