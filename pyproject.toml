@@ -39,6 +39,8 @@ python = "^3.9"
 requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
+nose2 = "^0.10.0"
+flake8 = "^3.9.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
