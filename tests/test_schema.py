@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import os
 import unittest
@@ -14,4 +14,4 @@ class TestSchema(unittest.TestCase):
 
     def test_get_all_schemas(self):
         r = self.mosp.schemas()
-        assert r.json()["metadata"]["count"] != '0', "no result"
+        assert r.json()["metadata"]["count"] != "0", "no result"
