@@ -15,3 +15,7 @@ class TestObject(unittest.TestCase):
     def test_get_all_objects(self):
         r = self.mosp.objects()
         assert r.json()["metadata"]["count"] != 0, "no result"
+
+    def test_get_all_objects_from_unknown_org(self):
+        r = self.mosp.objects(params = {"organization": "Unknown org"})
+        assert r.json()["metadata"]["count"] == 0
