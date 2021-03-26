@@ -9,6 +9,10 @@ PyMOSP is a Python library to access [MOSP](https://github.com/CASES-LU/MOSP).
     $ pipx install PyMOSP
     ✨🐍✨
 
+## Example
+
+See the examples in the file [example.py](example.py).
+
 
 ## License
 
