@@ -6,7 +6,7 @@ PyMOSP is a Python library to access [MOSP](https://github.com/CASES-LU/MOSP).
 ## Installation
 
 ```bash
-$ pipx install PyMOSP
+$ pipx install pymosp
 ✨🐍✨
 ```
 

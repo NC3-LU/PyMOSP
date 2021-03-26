@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*
+# -*- coding: utf-8 -*-
 
 """
-pymosp.api
+API.
 """
 from typing import TypeVar, Optional, Tuple, List, Dict, Union, Any, Mapping, Iterable
 
