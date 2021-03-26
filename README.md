@@ -2,22 +2,33 @@
 
 PyMOSP is a Python library to access [MOSP](https://github.com/CASES-LU/MOSP).
 
+
 ## Installation
 
-.. code:: bash
+```bash
+$ pipx install PyMOSP
+✨🐍✨
+```
 
-    $ pipx install PyMOSP
-    ✨🐍✨
+or via the Git repository:
 
-## Example
+```bash
+$ git clone https://github.com/CASES-LU/PyMOSP
+$ cd PyMOSP
+$ poetry install
+$ poetry run nose2 -v --pretty-assert
+```
 
-See the examples in the file [example.py](example.py).
+
+## Examples
+
+See the examples in the file [example.py](example.py) or in the tests folder.
 
 
 ## License
 
 This software is licensed under
-`GNU General Public License version 3 <https://www.gnu.org/licenses/gpl-3.0.html>`_
+[GNU General Public License version 3](https://www.gnu.org/licenses/gpl-3.0.html).
 
 * Copyright (C) 2019-2021 Cédric Bonhomme
 * Copyright (C) 2019-2021 SMILE gie securitymadein.lu
