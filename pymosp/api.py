@@ -24,28 +24,32 @@ class PyMOSP:
             raise NoURL("Please provide the URL of your MOSP instance.")
         self.root_url = url
 
-    # Objects
+    # ## BEGIN Objects ##
 
-    def objects(self, pythonify: bool = False) -> Union[Dict, List[MOSPObject]]:
+    def objects(self, params: Mapping = {}, pythonify: bool = False) -> Union[Dict, List[MOSPObject]]:
         """Get all the events from the MOSP instance."""
-        r = self._prepare_request("GET", "object")
+        r = self._prepare_request("GET", "object", params=params)
 
-    # Schemas
+    # ## BEGIN Schemas ##
 
-    def schemas(self, pythonify: bool = False) -> Union[Dict, List[MOSPObject]]:
+    def schemas(self, params: Mapping = {}, pythonify: bool = False) -> Union[Dict, List[MOSPObject]]:
         """Get all the events from the MOSP instance."""
-        r = self._prepare_request("GET", "schema")
+        r = self._prepare_request("GET", "schema", params=params)
 
     # Helpers
 
     def _prepare_request(
-        self, request_type: str, url: str, data: Union[str, Iterable, Mapping] = {}
+        self,
+        request_type: str,
+        url: str,
+        data: Union[str, Iterable, Mapping] = {},
+        params: Mapping = {},
     ) -> requests.Response:
         url = urljoin(self.root_url, url)
         if data == {} or isinstance(data, str):
             d = data
 
-        r = requests.request(request_type, url, data=data)
+        r = requests.request(request_type, url, data=data, params=params)
         # objects_r = self._check_json_response(r)
 
         print(r.json())
