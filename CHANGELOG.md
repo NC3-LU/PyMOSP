@@ -2,6 +2,19 @@ Changelog
 =========
 
 
+v0.4.1 (2021-03-31)
+-------------------
+
+Fix
+~~~
+- [documentation] fix the documentation in the README.
+  #HowToFuckUpARelease. [Cédric Bonhomme]
+
+Other
+~~~~~
+- Updated README. [Cédric Bonhomme]
+
+
 v0.4.0 (2021-03-31)
 -------------------
 
@@ -15,6 +28,7 @@ New
 
 Changes
 ~~~~~~~
+- [release] Bumped version number. [Cédric Bonhomme]
 - [tests] Lint with Flake8. [Cédric Bonhomme]
 - [tests] added test on get objects with uuid and language. [Cédric
   Bonhomme]
@@ -29,6 +43,8 @@ Fix
 
 Other
 ~~~~~
+- Updated chagenlog. [Cédric Bonhomme]
+- Updated chagenlog. [Cédric Bonhomme]
 - Updated README and pyproject.toml. [Cédric Bonhomme]
 - Fixed bad format of link in README. [Cédric Bonhomme]
 - Replaced str by map when joining Python version number. [Cédric
