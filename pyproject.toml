@@ -27,7 +27,8 @@ classifiers=[
 include = [
     "CHANGELOG.md",
     "README.md",
-    "AUTHORS.md"
+    "AUTHORS.md",
+    "COPYING"
 ]
 
 [tool.poetry.urls]
