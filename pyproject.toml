@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pymosp"
-version = "0.3.0"
+version = "0.4.0"
 description = "Python Library to access MOSP."
 authors = ["Cédric Bonhomme <cedric@cedricbonhomme.org>"]
 license = "GPL-3.0-or-later"
@@ -47,6 +47,8 @@ requests = "^2.25.1"
 nose2 = "^0.10.0"
 flake8 = "^3.9.0"
 mypy = "^0.812"
+gitchangelog = "^3.0.4"
+EditorConfig = "^0.12.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "setuptools"]
