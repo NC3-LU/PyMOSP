@@ -28,12 +28,16 @@ include = [
     "CHANGELOG.md",
     "README.md",
     "AUTHORS.md",
-    "COPYING"
+    "COPYING",
+    "bin/*"
 ]
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/CASES-LU/PyMOSP/issues"
 "Source" = "https://github.com/CASES-LU/PyMOSP"
+
+[tool.poetry.scripts]
+pymosp = "bin.pymosp:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
