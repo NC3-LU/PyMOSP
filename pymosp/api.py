@@ -67,7 +67,7 @@ class PyMOSP:
     ) -> requests.Response:
         url = urljoin(self.root_url, url)
 
-        user_agent = f'PyMOSP - Python {".".join(str(x) for x in sys.version_info[:2])}'
+        user_agent = f'PyMOSP - Python {".".join(map(str, sys.version_info[:2]))}'
         headers = {
             "X-API-KEY": self.key,
             "Accept": "application/json",
