@@ -14,19 +14,19 @@ class TestObject(unittest.TestCase):
 
     def test_get_all_objects(self):
         r = self.mosp.objects()
-        assert r.json()["metadata"]["count"] != "0", "no result"
+        assert r["metadata"]["count"] != "0", "no result"
 
     def test_get_all_objects_from_unknown_org(self):
         r = self.mosp.objects(params={"organization": "Unknown org"})
-        assert r.json()["metadata"]["count"] == "0"
+        assert r["metadata"]["count"] == "0"
 
     def test_object_with_uuid_and_language(self):
         r = self.mosp.objects(
             params={"uuid": "69fbfe14-4591-11e9-9173-0800277f0571", "language": "EN"}
         )
-        assert r.json()["metadata"]["count"] == "1"
+        assert r["metadata"]["count"] == "1"
         assert (
-            r.json()["data"][0]["name"]
+            r["data"][0]["name"]
             == "The principle of least privilege is not applied"
         )
 
@@ -48,7 +48,7 @@ class TestObject(unittest.TestCase):
     #         }
     #     ]
     #     r = self.mosp.add_objects(new_objects)
-    #     assert r.json()["metadata"]["count"] == "1"
+    #     assert r["metadata"]["count"] == "1"
 
     def test_create_obect_with_bad_schema(self):
         new_objects = [
@@ -68,5 +68,4 @@ class TestObject(unittest.TestCase):
             }
         ]
         r = self.mosp.add_objects(new_objects)
-        assert r.status_code == 400
-        assert b"The object submited is not validated by the schema" in r.content
+        assert "The object submited is not validated by the schema" in r["message"]

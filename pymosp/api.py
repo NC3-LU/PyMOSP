@@ -33,7 +33,7 @@ class PyMOSP:
     ) -> Union[Dict, List[MOSPObject]]:
         """Get all the events from the MOSP instance."""
         r = self._prepare_request("GET", "object", params=params)
-        return r
+        return r.json()
 
     def add_objects(
         self, objects: List[MOSPObject], pythonify: bool = False
@@ -45,7 +45,7 @@ class PyMOSP:
         """
 
         r = self._prepare_request("POST", "object", data=objects)
-        return r
+        return r.json()
 
     # ## BEGIN Schemas ##
 
@@ -54,7 +54,7 @@ class PyMOSP:
     ) -> Union[Dict, List[MOSPObject]]:
         """Get all the events from the MOSP instance."""
         r = self._prepare_request("GET", "schema", params=params)
-        return r
+        return r.json()
 
     # Helpers
 
@@ -84,7 +84,7 @@ class PyMOSP:
 
         return r
 
-    def _check_json_response(self, response: requests.Response) -> Dict:  # type: ignore
-        r = self._check_response(response, expect_json=True)
-        if isinstance(r, (dict, list)):
-            return r
+    # def _check_json_response(self, response: requests.Response) -> Dict:  # type: ignore
+    #     r = self._check_response(response, expect_json=True)
+    #     if isinstance(r, (dict, list)):
+    #         return r

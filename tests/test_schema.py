@@ -14,4 +14,4 @@ class TestSchema(unittest.TestCase):
 
     def test_get_all_schemas(self):
         r = self.mosp.schemas()
-        assert r.json()["metadata"]["count"] != "0", "no result"
+        assert r["metadata"]["count"] != "0", "no result"
