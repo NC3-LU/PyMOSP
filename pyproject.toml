@@ -37,11 +37,11 @@ include = [
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.25.1"
-mypy = "^0.812"
 
 [tool.poetry.dev-dependencies]
 nose2 = "^0.10.0"
 flake8 = "^3.9.0"
+mypy = "^0.812"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "setuptools"]
