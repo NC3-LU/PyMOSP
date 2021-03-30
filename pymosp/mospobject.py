@@ -3,7 +3,7 @@
 from datetime import datetime
 
 class MOSPObject:
-    def __int__(self):
+    def __init__(self):
         self.name: str
         self.name: str
         self.last_updated: datetime
