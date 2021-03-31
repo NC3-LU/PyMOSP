@@ -5,6 +5,18 @@ Changelog
 v0.4.1 (2021-03-31)
 -------------------
 
+Changes
+~~~~~~~
+- [core] Python requirement set to >=3.8,<4.0. [Cédric Bonhomme]
+
+
+v0.4.1 (2021-03-30)
+-------------------
+
+Changes
+~~~~~~~
+- [release] Bumped version number. [Cédric Bonhomme]
+
 Fix
 ~~~
 - [documentation] fix the documentation in the README.
@@ -15,7 +27,7 @@ Other
 - Updated README. [Cédric Bonhomme]
 
 
-v0.4.0 (2021-03-31)
+v0.4.0 (2021-03-30)
 -------------------
 
 New
