@@ -5,6 +5,7 @@ syntax: glob
 *.pyc
 *~
 *.db
+.python-version
 
 config.py
 

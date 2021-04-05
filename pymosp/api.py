@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*
+# -*- coding: utf-8 -*-
 
 """
-pymosp.api
+API.
 """
+import sys
 from typing import TypeVar, Optional, Tuple, List, Dict, Union, Any, Mapping, Iterable
 
 import requests
@@ -23,20 +24,37 @@ class PyMOSP:
         if not url:
             raise NoURL("Please provide the URL of your MOSP instance.")
         self.root_url = url
+        self.key: str = key
 
     # ## BEGIN Objects ##
 
-    def objects(self, params: Mapping = {}, pythonify: bool = False) -> Union[Dict, List[MOSPObject]]:
+    def objects(
+        self, params: Mapping = {}, pythonify: bool = False
+    ) -> Union[Dict, List[MOSPObject]]:
         """Get all the events from the MOSP instance."""
         r = self._prepare_request("GET", "object", params=params)
-        return r
+        return r.json()
+
+    def add_objects(
+        self, objects: List[MOSPObject], pythonify: bool = False
+    ) -> Union[Dict, List[MOSPObject]]:
+        """Add a new object on a MOSP instance.
+
+        :param objects: event to add
+        :param pythonify: Returns a PyMOSP Object instead of the plain json output
+        """
+
+        r = self._prepare_request("POST", "object", data=objects)
+        return r.json()
 
     # ## BEGIN Schemas ##
 
-    def schemas(self, params: Mapping = {}, pythonify: bool = False) -> Union[Dict, List[MOSPObject]]:
+    def schemas(
+        self, params: Mapping = {}, pythonify: bool = False
+    ) -> Union[Dict, List[MOSPObject]]:
         """Get all the events from the MOSP instance."""
         r = self._prepare_request("GET", "schema", params=params)
-        return r
+        return r.json()
 
     # Helpers
 
@@ -48,17 +66,25 @@ class PyMOSP:
         params: Mapping = {},
     ) -> requests.Response:
         url = urljoin(self.root_url, url)
-        if data == {} or isinstance(data, str):
-            d = data
 
-        r = requests.request(request_type, url, data=data, params=params)
+        user_agent = f'PyMOSP - Python {".".join(map(str, sys.version_info[:2]))}'
+        headers = {
+            "X-API-KEY": self.key,
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "User-Agent": user_agent,
+        }
+
+        r = requests.request(
+            request_type, url, headers=headers, json=data, params=params
+        )
         # objects_r = self._check_json_response(r)
 
-        #print(r.json())
+        # print(r.json())
 
         return r
 
-    def _check_json_response(self, response: requests.Response) -> Dict:  # type: ignore
-        r = self._check_response(response, expect_json=True)
-        if isinstance(r, (dict, list)):
-            return r
+    # def _check_json_response(self, response: requests.Response) -> Dict:  # type: ignore
+    #     r = self._check_response(response, expect_json=True)
+    #     if isinstance(r, (dict, list)):
+    #         return r

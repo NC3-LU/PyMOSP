@@ -14,21 +14,25 @@ mosp = pymosp.PyMOSP(CONFIG.get("MOSP_URL_API"), CONFIG.get("TOKEN"))
 
 # List all objects without filters
 print("Objects:")
-mosp.objects()
+r = mosp.objects()
+print(r)
 print("="*79)
 
 # List all objects from an unknown organization
 print("Objects with params:")
 params = {"organization": "Unknown org"}
-mosp.objects(params=params)
+r = mosp.objects(params=params)
+print(r)
 print("="*79)
 
 # List objects validated by a schema from a specific organization
 print("Objects with params:")
 params = {"organization": "MONARC", "schema": "Library objects"}
-mosp.objects(params=params)
+r = mosp.objects(params=params)
+print(r)
 print("="*79)
 
 
 # print("Schemas:")
-mosp.schemas()
+r = mosp.schemas()
+print(r)
