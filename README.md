@@ -31,7 +31,7 @@ This software is licensed under
 [GNU General Public License version 3](https://www.gnu.org/licenses/gpl-3.0.html).
 
 * Copyright (C) 2019-2021 Cédric Bonhomme
-* Copyright (C) 2019-2021 SMILE gie securitymadein.lu
+* Copyright (C) 2019-2021 SECURITYMADEIN.LU
 
 For more information, [the list of authors and contributors](AUTHORS.md)
 is available.
