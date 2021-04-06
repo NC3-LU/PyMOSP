@@ -3,7 +3,7 @@
 
 # PyMOSP - PyMOSP is a Python library to access MOSP.
 # Copyright (C) 2019-2021 Cédric Bonhomme - https://www.cedricbonhomme.org
-# Copyright (C) 2019-2021 SMILE gie SECURITYMADEIN.LU
+# Copyright (C) 2019-2021 SECURITYMADEIN.LU
 #
 # For more information : https://github.com/CASES-LU/PyMOSP
 #
