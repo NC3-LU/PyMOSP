@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 # PyMOSP - PyMOSP is a Python library to access MOSP.
-# Copyright (C) 2019-2021 Cédric Bonhomme - https://www.cedricbonhomme.org
-# Copyright (C) 2019-2021 SECURITYMADEIN.LU
+# Copyright (C) 2019-2022 Cédric Bonhomme - https://www.cedricbonhomme.org
+# Copyright (C) 2019-2022 SECURITYMADEIN.LU
 #
 # For more information : https://github.com/CASES-LU/PyMOSP
 #
@@ -25,27 +25,28 @@ import argparse
 
 try:
     import pymosp
-except:
+except Exception:
     print("Install PyMOSP: pipx install pymosp")
 
-def main():
 
+def main():
     try:
-        py_mosp = pymosp.PyMOSP(os.getenv("MOSP_URL_API"), os.getenv("TOKEN"))
+        py_mosp = pymosp.PyMOSP(os.getenv("MOSP_URL_API", ""), os.getenv("TOKEN", ""))
     except Exception as e:
         print(e)
 
-
     parser = argparse.ArgumentParser(prog="PyMOSP")
-    subparsers = parser.add_subparsers(help='sub-command help', dest='command')
+    subparsers = parser.add_subparsers(help="sub-command help", dest="command")
 
     # Subparser: Object
-    parser_object = subparsers.add_parser('object', help='object help')
-    parser_object.add_argument('--list', default=True, action=argparse.BooleanOptionalAction)
+    parser_object = subparsers.add_parser("object", help="object help")
+    parser_object.add_argument(
+        "--list", default=True, action=argparse.BooleanOptionalAction
+    )
 
     arguments = parser.parse_args()
 
-    if arguments.command == 'object':
+    if arguments.command == "object":
         if arguments.list:
             r = py_mosp.objects()
             print(r)

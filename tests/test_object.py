@@ -25,15 +25,12 @@ class TestObject(unittest.TestCase):
             params={"uuid": "69fbfe14-4591-11e9-9173-0800277f0571", "language": "EN"}
         )
         assert r["metadata"]["count"] == "1"
-        assert (
-            r["data"][0]["name"]
-            == "The principle of least privilege is not applied"
-        )
+        assert r["data"][0]["name"] == "The principle of least privilege is not applied"
 
     # def test_create_obect(self):
     #     new_objects = [
     #         {
-    #             "name": "Possibility of installing correction programmes, updates, patches, hotfixes, etc.",
+    #             "name": "Possibility of installing correction programmes, patches, etc.",
     #             "description": "",
     #             "licenses": [{"license_id": "CC0-1.0"}],
     #             "schema_id": 14,
@@ -41,7 +38,7 @@ class TestObject(unittest.TestCase):
     #             "json_object": {
     #                 "code": "10",
     #                 "description": "",
-    #                 "label": "Possibility of installing correction programmes, updates, patches, hotfixes, etc.",
+    #                 "label": "Possibility of installing correction programmes, patches, etc.",
     #                 "language": "EN",
     #                 "uuid": "69fbfe01-4591-11e9-9173-0800277f0572",
     #             }
@@ -53,7 +50,7 @@ class TestObject(unittest.TestCase):
     def test_create_obect_with_bad_schema(self):
         new_objects = [
             {
-                "name": "Possibility of installing correction programmes, updates, patches, hotfixes, etc.",
+                "name": "Possibility of installing correction programmes, patches, etc.",
                 "description": "",
                 "licenses": [{"license_id": "CC0-1.0"}],
                 "schema_id": 21,
@@ -61,10 +58,10 @@ class TestObject(unittest.TestCase):
                 "json_object": {
                     "code": "10",
                     "description": "",
-                    "label": "Possibility of installing correction programmes, updates, patches, hotfixes, etc.",
+                    "label": "Possibility of installing correction programmes, patches, etc.",
                     "language": "EN",
                     "uuid": "69fbfe01-4591-11e9-9173-0800277f0572",
-                }
+                },
             }
         ]
         r = self.mosp.add_objects(new_objects)

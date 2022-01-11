@@ -4,7 +4,7 @@
 API.
 """
 import sys
-from typing import TypeVar, Optional, Tuple, List, Dict, Union, Any, Mapping, Iterable
+from typing import List, Dict, Union, Mapping, Iterable
 
 import requests
 from urllib.parse import urljoin
