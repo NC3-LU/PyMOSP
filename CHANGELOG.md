@@ -2,12 +2,39 @@ Changelog
 =========
 
 
-v0.4.1 (2021-03-31)
+v0.4.3 (2022-01-12)
+-------------------
+
+Changes
+~~~~~~~
+- [dependencies] Updated request and mypy. [Cédric Bonhomme]
+- Cosmethic changes. [Cédric Bonhomme]
+- Fixed conflict in AUTHORS.md file. [Cédric Bonhomme]
+- Minor changes in README file. [Cédric Bonhomme]
+
+Fix
+~~~
+- [tests] fixed key name of the result. [Cédric Bonhomme]
+- Removed useless import and fixed duplicate value in mospobject.py.
+  [Cédric Bonhomme]
+
+Other
+~~~~~
+- Merge branch 'master' of github.com:CASES-LU/PyMOSP. [Cédric Bonhomme]
+- PEP 561 -- Distributing and Packaging Type Information. [Cédric
+  Bonhomme]
+
+
+v0.4.2 (2021-03-31)
 -------------------
 
 Changes
 ~~~~~~~
 - [core] Python requirement set to >=3.8,<4.0. [Cédric Bonhomme]
+
+Other
+~~~~~
+- Updated README for the new release. [Cédric Bonhomme]
 
 
 v0.4.1 (2021-03-30)
