@@ -65,4 +65,4 @@ class TestObject(unittest.TestCase):
             }
         ]
         r = self.mosp.add_objects(new_objects)
-        assert "The object submited is not validated by the schema" in r["message"]
+        assert "The object submited is not validated by the schema" in r["description"]
