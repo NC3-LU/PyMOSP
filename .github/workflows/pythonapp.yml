@@ -34,7 +34,7 @@ jobs:
       run: |
         poetry run nose2 -v --pretty-assert
       env:
-        MOSP_TOKEN: ${{ secrets.MOSP_CASES_USER_TOKEN }}
+        MOSP_TOKEN: ${{ secrets.MOSP_HEROKU_USER_TOKEN }}
 
     - name: Type check with Mypy
       run: |
