@@ -9,8 +9,9 @@ import pymosp
 
 class TestObject(unittest.TestCase):
     def setUp(self):
+        mosp_instance = os.getenv("MOSP_INSTANCE", "https://objects.monarc.lu/api/v2/")
         token = os.getenv("MOSP_TOKEN")
-        self.mosp = pymosp.PyMOSP("https://mosp-dev.herokuapp.com/api/v2/", token)
+        self.mosp = pymosp.PyMOSP(mosp_instance, token)
 
     def test_get_all_objects(self):
         r = self.mosp.objects()
@@ -37,7 +38,7 @@ class TestObject(unittest.TestCase):
     #             "org_id": 1,
     #             "json_object": {
     #                 "code": "10",
-    #                 "description": "",
+    #                 "description": "Description of the new object.",
     #                 "label": "Possibility of installing correction programmes, patches, etc.",
     #                 "language": "EN",
     #                 "uuid": "69fbfe01-4591-11e9-9173-0800277f0572",

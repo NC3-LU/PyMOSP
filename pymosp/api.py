@@ -47,6 +47,10 @@ class PyMOSP:
         r = self._prepare_request("POST", "object", data=objects)
         return r.json()
 
+    # def delete_object(self, id: int) -> Dict:
+    #     r = self._prepare_request("DELETE", "object")
+    #     return r.json()
+
     # ## BEGIN Schemas ##
 
     def schemas(
