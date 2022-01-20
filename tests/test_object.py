@@ -55,7 +55,6 @@ class TestObject(unittest.TestCase):
         r = self.mosp.delete_object(r["data"][0]["id"])
         assert 204 == r
 
-
     def test_create_obect_with_bad_schema(self):
         new_objects = [
             {
