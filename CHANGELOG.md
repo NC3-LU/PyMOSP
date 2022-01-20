@@ -2,6 +2,32 @@ Changelog
 =========
 
 
+v0.5.0 (2022-01-20)
+-------------------
+
+New
+~~~
+- [object] it is now possible to delete an object from a MOSP instance
+  with the API. [Cédric Bonhomme]
+
+Changes
+~~~~~~~
+- [dependencies] Updated Python dependencies. [Cédric Bonhomme]
+- [tests] rename a test name. [Cédric Bonhomme]
+- Get MOSP instance URL from environment variable. [Cédric Bonhomme]
+- [workflow] Updated GitHub workflow. [Cédric Bonhomme]
+- [tests] enable test_create_object. [Cédric Bonhomme]
+- [tests] tests are now using the test instance of MOSP. [Cédric
+  Bonhomme]
+
+Fix
+~~~
+- [typing] delete_object returns the id of the deleted object. [Cédric
+  Bonhomme]
+- Fixed an issue when creating new objects. [Cédric Bonhomme]
+- [workflow] Updated GitHub workflow. [Cédric Bonhomme]
+
+
 v0.4.3 (2022-01-12)
 -------------------
 
