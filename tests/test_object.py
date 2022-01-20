@@ -28,7 +28,7 @@ class TestObject(unittest.TestCase):
         assert r["metadata"]["count"] == "1"
         assert r["data"][0]["name"] == "The principle of least privilege is not applied"
 
-    def test_create_obect(self):
+    def test_create_obect_and_delete(self):
         new_objects = [
             {
                 "name": "Possibility of installing correction programmes, etc.",
