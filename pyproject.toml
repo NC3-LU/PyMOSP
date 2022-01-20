@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pymosp"
-version = "0.4.3"
+version = "0.5.0"
 description = "Python Library to access MOSP."
 authors = ["Cédric Bonhomme <cedric@cedricbonhomme.org>"]
 license = "GPL-3.0-or-later"
