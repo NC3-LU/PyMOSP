@@ -48,6 +48,11 @@ class PyMOSP:
         return r.json()
 
     def delete_object(self, id: int) -> int:
+        """Delete an object from a MOSP instance.
+        Returns the HTTP status code from the MOSP instance.
+
+        :param id: The id of the object to delete.
+        """
         r = self._prepare_request("DELETE", "object/{}".format(id))
         return r.status_code
 
