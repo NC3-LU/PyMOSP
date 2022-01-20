@@ -44,12 +44,12 @@ class PyMOSP:
         :param pythonify: Returns a PyMOSP Object instead of the plain json output
         """
 
-        r = self._prepare_request("POST", "object", data=objects)
+        r = self._prepare_request("POST", "object/", data=objects)
         return r.json()
 
-    # def delete_object(self, id: int) -> Dict:
-    #     r = self._prepare_request("DELETE", "object")
-    #     return r.json()
+    def delete_object(self, id: int) -> Dict:
+        r = self._prepare_request("DELETE", "object/{}".format(id))
+        return r.status_code
 
     # ## BEGIN Schemas ##
 
