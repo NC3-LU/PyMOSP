@@ -51,6 +51,9 @@ nose2 = "^0.10.0"
 flake8 = "^3.9.0"
 gitchangelog = "^3.0.4"
 EditorConfig = "^0.12.3"
+sphinx-book-theme = "^0.3.2"
+sphinx-autodoc-typehints = "^1.18.3"
+sphinx-multiversion = "^0.2.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "setuptools"]
