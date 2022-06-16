@@ -52,6 +52,12 @@ $ poetry run nose2 -v --pretty-assert
 ```
 
 
+## Documentation
+
+A [documentation](https://www.monarc.lu/documentation/PyMOSP-documentation)
+is available on the MONARC website.
+
+
 ## Examples
 
 See the examples in the file [example.py](example.py) or in the tests folder.
