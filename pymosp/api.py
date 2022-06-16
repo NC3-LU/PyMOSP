@@ -31,17 +31,43 @@ class PyMOSP:
     def objects(
         self, params: Mapping = {}, pythonify: bool = False
     ) -> Union[Dict, List[MOSPObject]]:
-        """Get all the events from the MOSP instance."""
+        """Get all the objects from the MOSP instance.
+        Filters can be used with the ``params`` parameter.
+
+        >>> params = {"organization": "MONARC", "schema": "Library objects"}
+        >>> r = mosp.objects(params=params)
+        """
         r = self._prepare_request("GET", "object", params=params)
         return r.json()
 
     def add_objects(
         self, objects: List[MOSPObject], pythonify: bool = False
     ) -> Union[Dict, List[MOSPObject]]:
-        """Add a new object on a MOSP instance.
+        """Add one or several objects on a MOSP instance.
 
-        :param objects: event to add
+        :param objects: list of objects to add
         :param pythonify: Returns a PyMOSP Object instead of the plain json output
+
+        >>> mosp = pymosp.PyMOSP(mosp_instance, token)
+        >>> new_objects = [
+            {
+                "name": "Possibility of installing correction programmes, etc.",
+                "description": "Description of the new object.",
+                "licenses": [{"license_id": "CC0-1.0"}],
+                "schema_id": 3,
+                "org_id": 1,
+                "json_object": {
+                    "code": "10",
+                    "description": "Description of the new object.",
+                    "label": "Possibility of installing correction programmes, etc.",
+                    "type": "Primary",
+                    "version": 1,
+                    "language": "EN",
+                    "uuid": "69fbfe01-4591-11e9-9173-0800277f0572",
+                }
+            }
+        ]
+        >>> r = mosp.add_objects(new_objects)
         """
 
         r = self._prepare_request("POST", "object/", data=objects)
@@ -61,7 +87,7 @@ class PyMOSP:
     def schemas(
         self, params: Mapping = {}, pythonify: bool = False
     ) -> Union[Dict, List[MOSPObject]]:
-        """Get all the events from the MOSP instance."""
+        """Get all the schemas from the MOSP instance."""
         r = self._prepare_request("GET", "schema", params=params)
         return r.json()
 
