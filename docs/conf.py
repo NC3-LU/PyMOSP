@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PyMOSP'
-copyright = "SECURITYMADEIN.LU <info@cases.lu>"
+copyright = "NC3 Luxembourg <info@nc3.lu>"
 author = "Cédric Bonhomme <cedric@cedricbonhomme.org>"
 
 # The full version, including alpha/beta/rc tags
@@ -69,10 +69,10 @@ html_theme = 'sphinx_book_theme'
 
 html_theme_options = {
     "path_to_docs": "docs",
-    "repository_url": "https://github.com/CASES-LU/MOSP",
+    "repository_url": "https://github.com/NC3-LU/MOSP",
     # "repository_branch": "gh-pages",  # For testing
     "launch_buttons": {
-        "binderhub_url": "https://github.com/CASES-LU/MOSP",
+        "binderhub_url": "https://github.com/NC3-LU/MOSP",
     },
     "use_edit_page_button": True,
     "use_issues_button": True,

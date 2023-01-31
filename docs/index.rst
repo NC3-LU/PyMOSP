@@ -7,7 +7,7 @@ Welcome to PyMOSP's documentation!
 ==================================
 
 This document is intended to be a presentation and a user guide to
-`PyMOSP <https://github.com/CASES-LU/PyMOSP>`_.
+`PyMOSP <https://github.com/NC3-LU/PyMOSP>`_.
 
 .. toctree::
    :maxdepth: 2
