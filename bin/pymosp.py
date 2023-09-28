@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 # PyMOSP - PyMOSP is a Python library to access MOSP.
-# Copyright (C) 2019-2022 Cédric Bonhomme - https://www.cedricbonhomme.org
-# Copyright (C) 2019-2022 SECURITYMADEIN.LU
+# Copyright (C) 2019-2023 Cédric Bonhomme - https://www.cedricbonhomme.org
+# Copyright (C) 2019-2023 Luxembourg House of Cybersecurity
 #
-# For more information : https://github.com/CASES-LU/PyMOSP
+# For more information : https://github.com/NC3-LU/PyMOSP
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

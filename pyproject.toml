@@ -1,14 +1,14 @@
 [tool.poetry]
 name = "pymosp"
-version = "0.5.0"
+version = "0.5.1"
 description = "Python Library to access MOSP."
 authors = ["Cédric Bonhomme <cedric@cedricbonhomme.org>"]
 license = "GPL-3.0-or-later"
 
 readme = "README.md"
 
-homepage = "https://github.com/CASES-LU/PyMOSP"
-repository = "https://github.com/CASES-LU/PyMOSP"
+homepage = "https://github.com/NC3-LU/PyMOSP"
+repository = "https://github.com/NC3-LU/PyMOSP"
 
 keywords = ["json", "mosp", "security"]
 
@@ -34,8 +34,8 @@ include = [
 ]
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/CASES-LU/PyMOSP/issues"
-"Source" = "https://github.com/CASES-LU/PyMOSP"
+"Bug Tracker" = "https://github.com/NC3-LU/PyMOSP/issues"
+"Source" = "https://github.com/NC3-LU/PyMOSP"
 
 [tool.poetry.scripts]
 pymosp = "bin.pymosp:main"

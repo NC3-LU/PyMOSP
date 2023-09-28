@@ -1,12 +1,12 @@
 # PyMOSP
 
-[![Latest release](https://img.shields.io/github/release/CASES-LU/PyMOSP.svg?style=flat-square)](https://github.com/CASES-LU/PyMOSP/releases/latest)
-[![License](https://img.shields.io/github/license/CASES-LU/PyMOSP.svg?style=flat-square)](https://www.gnu.org/licenses/agpl-3.0.html)
-[![Workflow](https://github.com/CASES-LU/PyMOSP/workflows/Python%20application/badge.svg?style=flat-square)](https://github.com/CASES-LU/PyMOSP/actions?query=workflow%3A%22Python+application%22)
+[![Latest release](https://img.shields.io/github/release/NC3-LU/PyMOSP.svg?style=flat-square)](https://github.com/NC3-LU/PyMOSP/releases/latest)
+[![License](https://img.shields.io/github/license/NC3-LU/PyMOSP.svg?style=flat-square)](https://www.gnu.org/licenses/agpl-3.0.html)
+[![Workflow](https://github.com/NC3-LU/PyMOSP/workflows/Python%20application/badge.svg?style=flat-square)](https://github.com/NC3-LU/PyMOSP/actions?query=workflow%3A%22Python+application%22)
 [![PyPi version](https://img.shields.io/pypi/v/pymosp.svg?style=flat-square)](https://pypi.org/project/pymosp)
 
 
-PyMOSP is a Python library to access [MOSP](https://github.com/CASES-LU/MOSP).
+PyMOSP is a Python library to access [MOSP](https://github.com/NC3-LU/MOSP).
 
 
 ## Installation
@@ -45,7 +45,7 @@ print(r)
 or via the Git repository:
 
 ```bash
-$ git clone https://github.com/CASES-LU/PyMOSP
+$ git clone https://github.com/NC3-LU/PyMOSP
 $ cd PyMOSP
 $ poetry install
 $ poetry run nose2 -v --pretty-assert

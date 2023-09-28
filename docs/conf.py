@@ -22,7 +22,7 @@ copyright = "NC3 Luxembourg <info@nc3.lu>"
 author = "Cédric Bonhomme <cedric@cedricbonhomme.org>"
 
 # The full version, including alpha/beta/rc tags
-release = '0.5.0'
+release = '0.5.1'
 
 
 # -- General configuration ---------------------------------------------------
