@@ -18,9 +18,10 @@ classifiers=[
     "Environment :: Console",
     "Operating System :: POSIX :: Linux",
     "Intended Audience :: Information Technology",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Security",
     "Topic :: Internet"
 ]
@@ -41,7 +42,7 @@ include = [
 pymosp = "bin.pymosp:main"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 requests = "^2.25.1"
 mypy = "^0.931"
 types-requests = "^2.27.5"
