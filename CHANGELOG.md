@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+v0.5.2 (2024-02-13)
+-------------------
+
+Updated Python minimum requirements and dependencies.
+
+
 v0.5.0 (2022-01-20)
 -------------------
 
