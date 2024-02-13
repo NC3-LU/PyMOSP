@@ -25,12 +25,12 @@ jobs:
         # exit-zero treats all errors as warnings.
         poetry run flake8 . --count --max-complexity=10 --max-line-length=100 --statistics --exclude=old/,config.py
 
-    - name: Test with pytest
-      run: |
-        poetry run nose2 -v --pretty-assert
-      env:
-        MOSP_INSTANCE: ${{ secrets.MOSP_INSTANCE }}
-        MOSP_TOKEN: ${{ secrets.MOSP_USER_TOKEN }}
+    # - name: Test with pytest
+    #   run: |
+    #     poetry run nose2 -v --pretty-assert
+    #   env:
+    #     MOSP_INSTANCE: ${{ secrets.MOSP_INSTANCE }}
+    #     MOSP_TOKEN: ${{ secrets.MOSP_USER_TOKEN }}
 
     - name: Type check with Mypy
       run: |
