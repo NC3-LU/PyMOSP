@@ -47,9 +47,9 @@ requests = "^2.32.3"
 mypy = "^1.10.1"
 types-requests = "2.32.0.20240622"
 
-[tool.poetry.dev-dependencies]
-nose2 = "^0.10.0"
-flake8 = "^3.9.0"
+[tool.poetry.group.dev.dependencies]
+nose2 = "^0.15.1"
+flake8 = "^7.1.0"
 gitchangelog = "^3.0.4"
 EditorConfig = "^0.12.3"
 sphinx-book-theme = "^0.3.2"
