@@ -14,7 +14,7 @@ PyMOSP is a Python library to access [MOSP](https://github.com/NC3-LU/MOSP).
 ### Use it as a command line tool
 
 ```bash
-$ pipx install pyPyMOSPmosp
+$ pipx install PyMOSP
 installed package pymosp 0.5.3, Python 3.13.0
 These apps are now globally available
   - pymosp
