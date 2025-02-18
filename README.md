@@ -14,8 +14,8 @@ PyMOSP is a Python library to access [MOSP](https://github.com/NC3-LU/MOSP).
 ### Use it as a command line tool
 
 ```bash
-$ pipx install pymosp
-installed package pymosp 0.5.2, Python 3.12.1
+$ pipx install pyPyMOSPmosp
+installed package pymosp 0.5.3, Python 3.13.0
 These apps are now globally available
   - pymosp
 done! ✨ 🌟 ✨
@@ -30,7 +30,7 @@ $ pymosp object --list
 ### Use it as a Python library
 
 ```bash
-pip install pymosp
+pip install PyMOSP
 ```
 
 ```python
@@ -68,8 +68,8 @@ See the examples in the file [example.py](example.py) or in the tests folder.
 This software is licensed under
 [GNU General Public License version 3](https://www.gnu.org/licenses/gpl-3.0.html).
 
-* Copyright (C) 2019-2024 Cédric Bonhomme
-* Copyright (C) 2019-2024 LHC
+* Copyright (C) 2019-2025 Cédric Bonhomme
+* Copyright (C) 2019-2025 LHC
 
 For more information, [the list of authors and contributors](AUTHORS.md)
 is available.

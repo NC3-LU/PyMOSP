@@ -1,17 +1,40 @@
-[tool.poetry]
-name = "pymosp"
-version = "0.5.2"
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[project]
+name = "PyMOSP"
+version = "0.5.3"
 description = "Python Library to access MOSP."
-authors = ["Cédric Bonhomme <cedric@cedricbonhomme.org>"]
+authors = [
+    {name = "Cédric Bonhomme", email = "cedric@cedricbonhomme.org"}
+]
 license = "GPL-3.0-or-later"
-
 readme = "README.md"
-
-homepage = "https://github.com/NC3-LU/PyMOSP"
-repository = "https://github.com/NC3-LU/PyMOSP"
-
 keywords = ["json", "mosp", "security"]
 
+dynamic = ["classifiers"]
+
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "requests (>=2.32.3)",
+    "mypy (>=1.15.0)",
+    "types-requests (>=2.32.0.20241016)",
+]
+
+[project.urls]
+Homepage = "https://github.com/NC3-LU/PyMOSP"
+Repository = "https://github.com/NC3-LU/PyMOSP"
+Changelog = "https://github.com/NC3-LU/PyMOSP/blob/master/CHANGELOG.md"
+
+
+[project.scripts]
+pymosp = "bin.pymosp:main"
+
+
+[tool.poetry]
+requires-poetry = ">=2.0"
 classifiers=[
     "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     "Development Status :: 5 - Production/Stable",
@@ -25,7 +48,6 @@ classifiers=[
     "Topic :: Security",
     "Topic :: Internet"
 ]
-
 include = [
     "CHANGELOG.md",
     "README.md",
@@ -34,18 +56,6 @@ include = [
     "bin/*"
 ]
 
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/NC3-LU/PyMOSP/issues"
-"Source" = "https://github.com/NC3-LU/PyMOSP"
-
-[tool.poetry.scripts]
-pymosp = "bin.pymosp:main"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-requests = "^2.32.3"
-mypy = "^1.10.1"
-types-requests = "2.32.0.20240622"
 
 [tool.poetry.group.dev.dependencies]
 nose2 = "^0.15.1"
@@ -56,9 +66,6 @@ sphinx-book-theme = "^0.3.2"
 sphinx-autodoc-typehints = "^1.18.3"
 sphinx-multiversion = "^0.2.4"
 
-[build-system]
-requires = ["poetry-core>=1.0.0", "setuptools"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.mypy]
 python_version = "3.12"

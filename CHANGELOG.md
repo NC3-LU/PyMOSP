@@ -1,6 +1,15 @@
 Changelog
 =========
 
+v0.5.3 (2025-02-18)
+-------------------
+
+Changes
+~~~~~~~
+
+- Updated dependencies.
+- The project is now using Trusted Publishing with Pypi.
+
 
 v0.5.2 (2024-02-13)
 -------------------

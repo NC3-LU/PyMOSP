@@ -44,7 +44,7 @@ class TestObject(unittest.TestCase):
                     "version": 1,
                     "language": "EN",
                     "uuid": "69fbfe01-4591-11e9-9173-0800277f0572",
-                }
+                },
             }
         ]
         # Check that the object has been created
